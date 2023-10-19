@@ -38,3 +38,17 @@ function nextPage() {
         getData(cur_page)
     })
 }
+
+function prevPage() {
+    const backBtn = document.querySelector('#back')
+    const monsterContainer = document.querySelector('#monster-container')
+    backBtn.addEventListener('click', ()=>{
+        if (cur_page==1) {
+            cur_page = cur_page
+        } else {
+            cur_page = cur_page-1
+        }
+        monsterContainer.innerHTML = ''
+        getData(cur_page)
+    })
+}
