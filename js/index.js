@@ -28,3 +28,13 @@ function renderMonster(monster) {
     newdiv.append(p)
     monsterContainer.append(newdiv)
 }
+
+function nextPage() {
+    const forwardBtn = document.querySelector('#forward')
+    const monsterContainer = document.querySelector('#monster-container')
+    forwardBtn.addEventListener('click', ()=>{
+        cur_page = cur_page+1
+        monsterContainer.innerHTML = ''
+        getData(cur_page)
+    })
+}
