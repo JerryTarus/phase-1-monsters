@@ -12,3 +12,19 @@ function getData(page) {
         renderMonster(element)
     }))
 }
+
+function renderMonster(monster) {
+    const monsterContainer = document.querySelector('#monster-container')
+    const newdiv = document.createElement('div')
+    newdiv.id = monster.id
+    const h2 = document.createElement('h2')
+    h2.textContent = monster.name
+    const h4 = document.createElement('h4')
+    h4.textContent = "Age: "+monster.age
+    const p = document.createElement('p')
+    p.textContent = "Bio: "+monster.description
+    newdiv.append(h2)
+    newdiv.append(h4)
+    newdiv.append(p)
+    monsterContainer.append(newdiv)
+}
